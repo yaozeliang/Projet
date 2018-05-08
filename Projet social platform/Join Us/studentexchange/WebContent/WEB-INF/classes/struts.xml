@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+  
+ 
+   <package name="oa_default" extends="struts-default">
+        <interceptors>
+                <interceptor name="cmsLoginInterceptor" class="com.studentexchange.commom.web.interceptor.CmsLoginInterceptor"/>
+                <interceptor-stack name="os_stack">
+            	 	<interceptor-ref name="defaultStack"></interceptor-ref>
+                 	<interceptor-ref name="cmsLoginInterceptor"></interceptor-ref>
+                </interceptor-stack>
+        </interceptors>
+        <default-interceptor-ref name="os_stack"></default-interceptor-ref>
+        <global-results>
+            <result name="cmsLogin">/cms/session.jsp</result>
+    	</global-results>
+    </package>
+    
+    
+    <package name="portal_default" extends="struts-default">
+        <interceptors>
+                <interceptor name="portalLoginInterceptor" class="com.studentexchange.commom.web.interceptor.PortalLoginInterceptor"/>
+                <interceptor-stack name="portal_stack">
+            	 	<interceptor-ref name="defaultStack"></interceptor-ref>
+                 	<interceptor-ref name="portalLoginInterceptor"></interceptor-ref>
+                </interceptor-stack>
+        </interceptors>
+        <default-interceptor-ref name="portal_stack"></default-interceptor-ref>
+        <global-results>
+            <result name="portalLogin">/WEB-INF/jsp/portal/login/index.jsp</result>
+    	</global-results>
+    </package>
+   
+    
+    <include file="struts/cms-*.xml"></include>
+    <include file="struts/portal-*.xml"></include>
+</struts>
+

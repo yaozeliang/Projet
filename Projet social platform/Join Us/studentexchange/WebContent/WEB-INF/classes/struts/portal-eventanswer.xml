@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+  
+    <package name="portaleventanswerPack" namespace="/myportaleventanswer" extends="struts-default" >
+    	<action name="eventanswer" class="portalEventanswerAction">
+    		<result type= "chain" name="success">
+    			<param name="actionName">portalevent</param>  
+    			<param name="method">show</param>
+            	<param name="namespace">/myportalevent</param>  
+    		</result>
+    	</action>
+    </package>
+    
+</struts>
+

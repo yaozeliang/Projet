@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+    <package name="myAdminLogin" namespace="/myAdminLogin" extends="struts-default" >
+    	<action name="adminlogin" class="adminLoginAction">
+    		<result name="input">/cms/login.jsp</result>
+    		<result name="success">/cms/main.jsp</result>
+    	</action>
+    </package>
+   
+    
+</struts>

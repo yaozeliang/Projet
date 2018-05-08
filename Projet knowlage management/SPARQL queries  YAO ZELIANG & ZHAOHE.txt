@@ -1,0 +1,37 @@
+1.
+SELECT distinct ?name
+WHERE {
+	?per rdf:type ns:Person.
+	?movie rdf:type ns:Movie.
+        ?per ns:isActorOf ?movie.
+	?per ns:name ?name.
+}
+
+2.
+SELECT distinct ?title
+WHERE {
+	?movie rdf:type ns:Movie.
+	?movie ns:genre 'Thriller'.
+	?movie ns:title ?title.
+}
+
+3.
+SELECT distinct ?title
+WHERE {
+	?movie rdf:type ns:Movie.
+	?movie ns:genre 'Thriller'.
+	?movie ns:genre 'Crime'.
+	?movie ns:title ?title.
+}
+
+4.
+SELECT distinct ?name
+WHERE {
+
+	?movie rdf:type ns:Movie.
+        ?per ns:isActorOf ?movie.
+	?per ns:name ?name.
+	?per ns:age ?age.
+	filter(?age>51)
+}
+

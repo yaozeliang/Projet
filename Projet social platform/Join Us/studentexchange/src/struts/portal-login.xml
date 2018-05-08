@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+  
+    <package name="portalloginPack" namespace="/myportallogin" extends="struts-default" >
+    	<action name="portallogin" class="portalLoginAction">
+    		<result name="input">/WEB-INF/jsp/portal/login/index.jsp</result>
+    		<result name="success">/portal/index.jsp</result>
+    		<result type= "chain" name="success">
+    			<param name="actionName">portal</param>  
+            	<param name="namespace">/myportal</param>  
+    		</result> 
+    	</action>
+    </package>
+    
+</struts>
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+    <package name="indexPack" namespace="/myindex" extends="oa_default" >
+    	<action name="header" >
+    	   <result name="success">/cms/header.jsp</result>
+    	</action>
+    	
+    	<action name="menu" >
+    	   <result name="success">/cms/menu.jsp</result>
+    	</action>
+    	
+    	<action name="main" >
+    	   <result name="success">/cms/main.jsp</result>
+    	</action>
+    </package>
+   
+    
+</struts>
+

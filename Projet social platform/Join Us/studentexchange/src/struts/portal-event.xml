@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+  
+    <package name="portaleventPack" namespace="/myportalevent" extends="struts-default" >
+    	<action name="portalevent" class="portalEventAction">
+    		<result name="create">/WEB-INF/jsp/portal/event/create.jsp</result>
+    		<result name="show">/WEB-INF/jsp/portal/event/show.jsp</result>
+    		<result name="input">/WEB-INF/jsp/portal/event/index.jsp</result>
+    	</action>
+    </package>
+    
+</struts>
+
